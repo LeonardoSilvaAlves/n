@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  background-color: #EF476F;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  
+  margin-top: 20%;
+  justify-content: center;
+  padding: 20px;
+  background-color: #FCFCFC;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+h1 {
+  color: #26547C;
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.task-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.task-input input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #26547C;
+  outline: none;
+  font-size: 16px;
+  transition: border-bottom-color 0.3s;
+}
+
+.task-input input[type="text"]:focus {
+  border-bottom-color: #06D6A0;
+}
+
+.task-input button {
+  background-color: #26547C;
+  color: #FCFCFC;
+  border: none;
+  border-radius: 15%;
+  padding: 8px 16px;
+  margin-left: 11px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.task-input button:hover {
+  background-color: #33f33d;
+  color: #2b2a2a;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-list li span {
+  flex-grow: 1;
+  color: #26547C;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.task-list li span.completed {
+  text-decoration: line-through;
+  color: #999999;
+}
+
+.task-list li button {
+  background-color: #EF476F;
+  color: #FCFCFC;
+  border: none;
+  border-radius: 15%;
+  padding: 8px 16px;
+  margin-left: 11px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+.task-list li button:hover {
+  background-color: #FFD166;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
